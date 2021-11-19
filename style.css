@@ -37,6 +37,10 @@ body {
     margin-right: 5vw;
 }
 
+.weather-icon {
+    width: 10vw;
+}
+
 .temperature-section {
     height: 30vh;
     width: 100vw;

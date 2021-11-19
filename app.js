@@ -21,14 +21,12 @@ window.addEventListener('load', () => {
                     return response.json();
                 })
                 .then(data => {
-                    console.log(data);
-
                     const {is_day, temp_c, temp_f} = data.current;
                     const {name, region} = data.location;
                     const {text, icon} = data.current.condition;
 
                     currentLocation.textContent = `${name}/${region}`;
-                    weatherIcon.innerHTML = `<img src="https://${icon.substring(2)}">`;
+                    weatherIcon.innerHTML = `<img class="weather-icon" src="https://${icon.substring(2)}">`;
                     temperatureDegree.textContent = temp_f;
                     temperatureText.textContent = text;
 
